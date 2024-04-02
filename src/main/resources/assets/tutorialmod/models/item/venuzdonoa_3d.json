@@ -1,0 +1,138 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "1": "tutorialmod:item/venezdonoaguard",
+    "2": "tutorialmod:item/venezdonoablade2",
+    "3": "tutorialmod:item/venezdonoablade",
+    "4": "tutorialmod:item/venezdonoablade3",
+    "5": "tutorialmod:item/venezdonoablade4",
+    "6": "tutorialmod:item/venezdonoablade5",
+    "7": "tutorialmod:item/venezdonoablade6",
+    "8": "tutorialmod:item/venezdonoahilt",
+    "particle": "tutorialmod:item/venezdonoahilt"
+  },
+  "elements": [
+    {
+      "from": [7, 24, 6],
+      "to": [9, 25, 7],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 1], "texture": "#7"},
+        "east": {"uv": [2, 1, 3, 2], "texture": "#7"},
+        "south": {"uv": [0, 1, 2, 2], "texture": "#7"},
+        "west": {"uv": [2, 2, 3, 3], "texture": "#7"},
+        "up": {"uv": [2, 3, 0, 2], "texture": "#7"},
+        "down": {"uv": [4, 0, 2, 1], "texture": "#7"}
+      }
+    },
+    {
+      "from": [7, 13, 7],
+      "to": [9, 19, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 6], "texture": "#2"},
+        "east": {"uv": [2, 0, 4, 6], "texture": "#2"},
+        "south": {"uv": [4, 0, 6, 6], "texture": "#2"},
+        "west": {"uv": [0, 6, 2, 12], "texture": "#2"},
+        "up": {"uv": [8, 2, 6, 0], "texture": "#2"},
+        "down": {"uv": [4, 6, 2, 8], "texture": "#2"}
+      }
+    },
+    {
+      "from": [7, 23, 6],
+      "to": [9, 24, 8],
+      "faces": {
+        "north": {"uv": [2, 0, 4, 1], "texture": "#6"},
+        "east": {"uv": [2, 1, 4, 2], "texture": "#6"},
+        "south": {"uv": [2, 2, 4, 3], "texture": "#6"},
+        "west": {"uv": [2, 3, 4, 4], "texture": "#6"},
+        "up": {"uv": [2, 2, 0, 0], "texture": "#6"},
+        "down": {"uv": [2, 2, 0, 4], "texture": "#6"}
+      }
+    },
+    {
+      "from": [7, 22, 6],
+      "to": [9, 23, 9],
+      "faces": {
+        "north": {"uv": [0, 4, 2, 5], "texture": "#5"},
+        "east": {"uv": [0, 3, 3, 4], "texture": "#5"},
+        "south": {"uv": [4, 0, 6, 1], "texture": "#5"},
+        "west": {"uv": [3, 3, 6, 4], "texture": "#5"},
+        "up": {"uv": [2, 3, 0, 0], "texture": "#5"},
+        "down": {"uv": [4, 0, 2, 3], "texture": "#5"}
+      }
+    },
+    {
+      "from": [7, 19, 7],
+      "to": [9, 22, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 3], "texture": "#4"},
+        "east": {"uv": [2, 0, 4, 3], "texture": "#4"},
+        "south": {"uv": [0, 3, 2, 6], "texture": "#4"},
+        "west": {"uv": [2, 3, 4, 6], "texture": "#4"},
+        "up": {"uv": [6, 2, 4, 0], "texture": "#4"},
+        "down": {"uv": [6, 2, 4, 4], "texture": "#4"}
+      }
+    },
+    {
+      "from": [7, 7, 7],
+      "to": [9, 13, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 6], "texture": "#3"},
+        "east": {"uv": [2, 0, 4, 6], "texture": "#3"},
+        "south": {"uv": [4, 0, 6, 6], "texture": "#3"},
+        "west": {"uv": [0, 6, 2, 12], "texture": "#3"},
+        "up": {"uv": [8, 2, 6, 0], "texture": "#3"},
+        "down": {"uv": [4, 6, 2, 8], "texture": "#3"}
+      }
+    },
+    {
+      "from": [6, 5, 6],
+      "to": [10, 7, 10],
+      "faces": {
+        "north": {"uv": [4, 0, 8, 2], "texture": "#1"},
+        "east": {"uv": [4, 2, 8, 4], "texture": "#1"},
+        "south": {"uv": [4, 4, 8, 6], "texture": "#1"},
+        "west": {"uv": [4, 6, 8, 8], "texture": "#1"},
+        "up": {"uv": [4, 4, 0, 0], "texture": "#1"},
+        "down": {"uv": [4, 4, 0, 8], "texture": "#1"}
+      }
+    },
+    {
+      "from": [7, 0, 7],
+      "to": [9, 5, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 5], "texture": "#8"},
+        "east": {"uv": [2, 0, 4, 5], "texture": "#8"},
+        "south": {"uv": [4, 0, 6, 5], "texture": "#8"},
+        "west": {"uv": [0, 5, 2, 10], "texture": "#8"},
+        "up": {"uv": [4, 7, 2, 5], "texture": "#8"},
+        "down": {"uv": [6, 5, 4, 7], "texture": "#8"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, 180, 0],
+      "translation": [0, 5.75, 1.25],
+      "scale": [1, 1.2, 1]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [0, 180, 0],
+      "translation": [0, 5.75, 1.25],
+      "scale": [1, 1.2, 1]
+    },
+    "firstperson_righthand": {
+      "translation": [0, 4.5, 0]
+    },
+    "firstperson_lefthand": {
+      "translation": [0, 4.5, 0]
+    }
+  },
+  "groups": [
+    {
+      "name": "Sword",
+      "origin": [0, 0, 0],
+      "color": 0,
+      "children": [0, 1, 2, 3, 4, 5, 6, 7]
+    }
+  ]
+}
