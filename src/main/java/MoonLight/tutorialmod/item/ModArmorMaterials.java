@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     USELESS("useless", 1000, new int[]{ 100, 100, 100, 100 }, 1000,
-            SoundEvents.ANVIL_PLACE, 1000f, 100f, () -> Ingredient.of(ModItems.USELESS_ITEM.get()));
+            SoundEvents.ARMOR_EQUIP_CHAIN, 1000f, 100f, () -> Ingredient.of(ModItems.USELESS_ITEM.get()));
 
     private final String name;
     private final int durabilityMultiplier;
