@@ -28,8 +28,9 @@ public class ModArmorItem extends ArmorItem implements IItemExtension {
 
             // Check if the player already has flight enabled through another means
             if (player.getAbilities().mayfly) return;
-
+            if (player.getAbilities().invulnerable) return;
             if (player.isCreative() || player.isSpectator()) return;
+
 
             if (boots.getItem() instanceof ModArmorItem && leggings.getItem() instanceof ModArmorItem && chestplate.getItem() instanceof ModArmorItem && helmet.getItem() instanceof ModArmorItem) {
                 player.getAbilities().mayfly = true;

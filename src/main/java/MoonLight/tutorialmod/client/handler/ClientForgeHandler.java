@@ -33,7 +33,6 @@ public class ClientForgeHandler {
                 if(hitResult != null) {
                     //sendMessageToTarget(hitResult.getDisplayName().getString());
                     minecraft.player.sendSystemMessage(Component.literal("Snap"));
-                    minecraft.player.isInvulnerable();
                     PacketHandler.sendToServer(new KillNear(hitResult.getId()));
                 }
                 else {

@@ -73,6 +73,8 @@ public class VenezdonoaItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
+
+        if (pTarget.isInvulnerable()) return false;
         //pTarget.addEffect(new MobEffectInstance(MobEffects.CONFUSION,250,255));
         //pAttacker.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,250,3));
         pStack.hurtAndBreak(0, pAttacker, (p_43296_) -> {
