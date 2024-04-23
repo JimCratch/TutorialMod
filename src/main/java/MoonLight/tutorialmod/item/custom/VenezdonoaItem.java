@@ -1,6 +1,7 @@
 package MoonLight.tutorialmod.item.custom;
 
-import MoonLight.tutorialmod.util.ModTags;
+import MoonLight.tutorialmod.damage.DamageSources;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
@@ -74,9 +75,13 @@ public class VenezdonoaItem extends SwordItem {
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
 
-        if (pTarget.isInvulnerable()) return false;
+        if (pTarget.isInvulnerable()) {
+            pTarget.hurt(DamageSources.customDamage(pTarget),1000000000);
+        }
+
         //pTarget.addEffect(new MobEffectInstance(MobEffects.CONFUSION,250,255));
         //pAttacker.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,250,3));
+
         pStack.hurtAndBreak(0, pAttacker, (p_43296_) -> {
             p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
         });

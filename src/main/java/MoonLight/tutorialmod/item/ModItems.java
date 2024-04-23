@@ -47,6 +47,9 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> VENUZDONOA = ITEMS.register("venuzdonoa",
             () -> new VenezdonoaItem(ModToolTiers.ANOSVOLDIGOAD, 1000000000,1000000000, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).fireResistant()));
 
+    public static final DeferredHolder<Item, Item> USELESS_BOW = ITEMS.register("useless_bow",
+            () -> new CustomBowItem(new Item.Properties()));
+
     public static final DeferredHolder<Item, Item> USELESS_HELMET = ITEMS.register("useless_helmet",
             () -> new ModArmorItem(ArmorItem.Type.HELMET, new Item.Properties()));
     public static final DeferredHolder<Item, Item> USELESS_CHESTPLATE = ITEMS.register("useless_chestplate",
