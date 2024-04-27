@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -73,19 +74,10 @@ public class VenezdonoaItem extends SwordItem {
     }
 
     @Override
-    public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
+    public boolean hurtEnemy(ItemStack itemstack, LivingEntity attackedEntity, LivingEntity attacker) {
+        attackedEntity.hurt(DamageSources.customDamage(attacker), 1000000000F);
+        return super.hurtEnemy(itemstack, attackedEntity, attacker);
 
-        if (pTarget.isInvulnerable()) {
-            pTarget.hurt(DamageSources.customDamage(pTarget),1000000000);
-        }
-
-        //pTarget.addEffect(new MobEffectInstance(MobEffects.CONFUSION,250,255));
-        //pAttacker.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,250,3));
-
-        pStack.hurtAndBreak(0, pAttacker, (p_43296_) -> {
-            p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
-        });
-        return true;
     }
 
     @Override
