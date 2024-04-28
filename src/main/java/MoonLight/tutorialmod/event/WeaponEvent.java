@@ -4,24 +4,27 @@ import MoonLight.tutorialmod.TutorialMod;
 import MoonLight.tutorialmod.damage.DamageSources;
 import MoonLight.tutorialmod.item.ModItems;
 import MoonLight.tutorialmod.util.DamageUtil;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import java.util.ArrayList;
 import java.util.List;
+import net.neoforged.neoforge.event.entity.living.LivingDestroyBlockEvent;
 
 
-public class WeaponEventHandler {
+public class WeaponEvent {
     @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-    public static class ForgeEvents {
+    public static class Events {
         @SubscribeEvent(priority = EventPriority.LOWEST)
-        public static void onLivingAttackLow(LivingAttackEvent event) {
+        public static void AttackLivingPriorityLOW(LivingAttackEvent event) {
             LivingEntity victim = event.getEntity();
 
             if (victim.level().isClientSide) return;
@@ -36,8 +39,17 @@ public class WeaponEventHandler {
 
             if (!DamageUtil.isMelee(source)) return;
 
-            if (source.is(DamageSources.Custom_Damage) && victim.isInvulnerable() && items.contains(ModItems.VENUZDONOA.get())) {
+            if (!source.is(DamageSources.Custom_Damage) && items.contains(ModItems.VENUZDONOA.get())) {
                 event.setCanceled(victim.hurt(DamageSources.customDamage(attacker), 1000000000));
+            }
+        }
+
+        public static void TestingEvents(LivingDestroyBlockEvent livingDestroyBlockEvent) {
+            Block block = livingDestroyBlockEvent.getState().getBlock();
+            Minecraft minecraft = Minecraft.getInstance();
+
+            if (minecraft.player != null) {
+                minecraft.player.sendSystemMessage(Component.literal("Hello there this block is: " + block));
             }
         }
     }

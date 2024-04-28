@@ -22,6 +22,7 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> BULLETS_ITEM = tag("bullets_item");
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(TutorialMod.MOD_ID, name));
         }

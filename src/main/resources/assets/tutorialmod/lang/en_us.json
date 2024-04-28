@@ -22,7 +22,10 @@
   "message.tutorialmod.example_key_pressed": "Example Key Pressed",
   "item.tutorialmod.venuzdonoa": "Venuzdonoa",
   "tooltip.tutorialmod.venuzdonoa.tooltip": "Defies all logic. Defies anything and everything",
+  "item.tutorialmod.useless_bow": "Useless Bow",
   "item.tutorialmod.weird_sword": "Beastly Sword",
   "item.tutorialmod.cool_sword": "Cool Sword",
+  "item.tutorialmod.kaneki_mask": "Ken Kaneki Mask",
+  "item.tutorialmod.bullet_item": "Bullet",
   "creativetab.tutorial_tab": "Tutorial Mod"
 }

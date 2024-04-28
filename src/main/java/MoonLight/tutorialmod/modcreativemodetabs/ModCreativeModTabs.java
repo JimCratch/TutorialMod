@@ -32,6 +32,9 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.VENUZDONOA.get());
                         pOutput.accept(ModItems.WEIRD_SWORD.get());
                         pOutput.accept(ModItems.COOL_SWORD.get());
+                        pOutput.accept(ModItems.USELESS_BOW.get());
+                        pOutput.accept(ModItems.KANEKI_MASK.get());
+                        pOutput.accept(ModItems.BULLET_ITEM.get());
                     }))
                     .build());
 

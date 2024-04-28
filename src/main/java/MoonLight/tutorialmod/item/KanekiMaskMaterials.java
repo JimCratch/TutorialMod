@@ -9,10 +9,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModArmorMaterials implements ArmorMaterial {
+public enum KanekiMaskMaterials implements ArmorMaterial {
 
-    USELESS("useless", 1000, new int[]{ 100, 100, 100, 100 }, 1000,
-            SoundEvents.ARMOR_EQUIP_CHAIN, 1000f, 100f, () -> Ingredient.of(ModItems.USELESS_ITEM.get()));
+    KANEKI("kaneki_mask", 10, new int[]{ 11, 16, 16, 13 }, 10,
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 10, 10F, () -> Ingredient.of(ModItems.USELESS_ITEM.get()));
 
     private final String name;
     private final int durabilityMultiplier;
@@ -25,7 +25,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     private static final int[] BASE_DURABILITY = { 11, 16, 16, 13 };
 
-    ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound,
+    KanekiMaskMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound,
                       float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;

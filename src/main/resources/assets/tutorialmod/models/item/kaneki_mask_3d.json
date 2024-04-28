@@ -1,0 +1,193 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "tutorialmod:item/kaneki_mask_3d",
+		"particle": "tutorialmod:item/kaneki_mask_3d"
+	},
+	"elements": [
+		{
+			"name": "upper",
+			"from": [3.45, 9, 3.45],
+			"to": [12.55, 9, 5.55],
+			"rotation": {"angle": 0, "axis": "x", "origin": [6, 12, 12.5]},
+			"faces": {
+				"up": {"uv": [8, 1.2, 16, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [8, 0, 16, 1.25], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "front",
+			"from": [3.45, -0.05, 3.45],
+			"to": [12.55, 9, 3.45],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"south": {"uv": [0, 8, 8, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bottom",
+			"from": [3.45, -0.05, 3.45],
+			"to": [12.55, -0.05, 5.55],
+			"rotation": {"angle": 0, "axis": "x", "origin": [6, 12, 12.5]},
+			"faces": {
+				"up": {"uv": [8, 0, 16, 1.25], "texture": "#0", "cullface": "down"},
+				"down": {"uv": [8, 1.2, 16, 0], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "string1r",
+			"from": [3.45, -0.05, 3.45],
+			"to": [3.45, 9, 5.55],
+			"faces": {
+				"east": {"uv": [14.75, 1.25, 15.9, 9.25], "texture": "#0"},
+				"west": {"uv": [16, 1.25, 14.75, 9.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string2r",
+			"from": [3.45, 7.15, 5.55],
+			"to": [3.45, 8.15, 12.5],
+			"faces": {
+				"east": {"uv": [8, 9.25, 16, 10], "texture": "#0"},
+				"west": {"uv": [8, 9.25, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string3r",
+			"from": [3.45, 0.8, 5.55],
+			"to": [3.45, 1.8, 12.5],
+			"faces": {
+				"east": {"uv": [8, 9.25, 16, 10], "texture": "#0"},
+				"west": {"uv": [8, 9.25, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string1l",
+			"from": [12.55, -0.05, 3.45],
+			"to": [12.55, 9, 5.55],
+			"faces": {
+				"east": {"uv": [14.75, 1.25, 16, 9.25], "texture": "#0"},
+				"west": {"uv": [13.5, 1.25, 14.75, 9.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string2l",
+			"from": [12.55, 7.15, 5.55],
+			"to": [12.55, 8.15, 12.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [17, 8, 8]},
+			"faces": {
+				"east": {"uv": [8, 9.25, 16, 10], "texture": "#0"},
+				"west": {"uv": [8, 9.25, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string3l",
+			"from": [12.55, 0.8, 5.55],
+			"to": [12.55, 1.8, 12.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [17, 8, 8]},
+			"faces": {
+				"east": {"uv": [8, 9.25, 16, 10], "texture": "#0"},
+				"west": {"uv": [8, 9.25, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string1b",
+			"from": [3.45, 7.15, 12.5],
+			"to": [12.55, 8.15, 12.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3.45, 7.5, 9]},
+			"faces": {
+				"north": {"uv": [8, 9.25, 16, 10], "texture": "#0"},
+				"south": {"uv": [8, 9.25, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "string2b",
+			"from": [3.45, 0.8, 12.5],
+			"to": [12.55, 1.8, 12.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3.45, 7.5, 9]},
+			"faces": {
+				"north": {"uv": [8, 9.25, 16, 10], "texture": "#0"},
+				"south": {"uv": [8, 9.25, 16, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "oxygensupplyr",
+			"from": [2.75, -1, 5],
+			"to": [3.75, 1, 7],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [3, 0, 6]},
+			"faces": {
+				"north": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0"},
+				"east": {"uv": [8, 7, 10.25, 9.25], "texture": "#0"},
+				"south": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0"},
+				"west": {"uv": [8, 7, 10.25, 9.25], "texture": "#0"},
+				"up": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0"},
+				"down": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "oxygensupplyl",
+			"from": [12.25, -1, 5],
+			"to": [13.25, 1, 7],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [13, 0, 6]},
+			"faces": {
+				"north": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0"},
+				"east": {"uv": [8, 7, 10.25, 9.25], "texture": "#0"},
+				"south": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0"},
+				"west": {"uv": [8, 7, 10.25, 9.25], "texture": "#0"},
+				"up": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0"},
+				"down": {"uv": [8, 7.5, 8.75, 8.75], "texture": "#0", "cullface": "down"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 1.75, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 1.75, 1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"ground": {
+			"translation": [0, 1, 0],
+			"scale": [0.65, 0.65, 0.64]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [0, 3, 0],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"head": {
+			"translation": [0, 5.5, 0],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"fixed": {
+			"translation": [0, 7.5, 0.5],
+			"scale": [2, 2, 2]
+		}
+	},
+	"groups": [
+		{
+			"name": "Mask",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				0,
+				1,
+				2,
+				{
+					"name": "strings",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [3, 4, 5, 6, 7, 8, 9, 10]
+				},
+				{
+					"name": "oxygensupply",
+					"origin": [8, 8, 8],
+					"color": 0,
+					"children": [11, 12]
+				}
+			]
+		}
+	]
+}

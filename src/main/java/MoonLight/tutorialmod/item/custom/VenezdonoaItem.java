@@ -75,7 +75,7 @@ public class VenezdonoaItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack itemstack, LivingEntity attackedEntity, LivingEntity attacker) {
-        attackedEntity.hurt(DamageSources.customDamage(attacker), 1000000000F);
+        attackedEntity.hurt(DamageSources.customDamage(attacker), 1000000000);
         return super.hurtEnemy(itemstack, attackedEntity, attacker);
 
     }
