@@ -20,8 +20,11 @@ public class ArrowEvent {
         public static class Arrows {
             @SubscribeEvent(priority = EventPriority.LOWEST)
             public static void ProjectileLand(ProjectileImpactEvent event) {
-
                 Level player = Minecraft.getInstance().player.level();
+                boolean level = player.isClientSide;
+
+                if (level) return;
+
                 int blockX = event.getProjectile().getBlockX();
                 int blockY = event.getProjectile().getBlockY();
                 int blockZ = event.getProjectile().getBlockZ();

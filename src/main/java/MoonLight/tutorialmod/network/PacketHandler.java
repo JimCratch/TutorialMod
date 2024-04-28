@@ -17,7 +17,7 @@ public class PacketHandler {
         IPayloadRegistrar registrar = event.registrar(TutorialMod.MOD_ID)
                 .versioned("1.2.3");
 
-        // Clietbound packets
+        // Clientbound packets
         registrar.play(KillNear.IDENTIFIER, KillNear::new, handler -> handler
                 .client(KillNear::handle)
                 .server(KillNear::handle));
