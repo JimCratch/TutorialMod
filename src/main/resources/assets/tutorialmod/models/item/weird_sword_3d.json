@@ -11,8 +11,7 @@
 		"21": "tutorialmod:item/weirdsword9",
 		"22": "tutorialmod:item/weirdsword10",
 		"23": "tutorialmod:item/weirdsword11",
-		"24": "tutorialmod:item/weirdsword12",
-		"particle": "tutorialmod:item/weirdsword1"
+		"24": "tutorialmod:item/weirdsword12"
 	},
 	"elements": [
 		{
@@ -163,28 +162,17 @@
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [0, -90, 0],
-			"translation": [0, 1.5, 1.25]
+			"translation": [0, 1.5, 1.25],
+			"scale": [1, 1, 0.35]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, 90, 0],
-			"translation": [0, 1.5, 1.25]
+			"rotation": [0, 90, 0]
 		},
 		"firstperson_righthand": {
-			"rotation": [-10, -90, 0]
+			"rotation": [0, -90, 0]
 		},
 		"firstperson_lefthand": {
-			"rotation": [-10, 90, 0]
-		},
-		"ground": {
-			"rotation": [90, 0, 0]
-		},
-		"gui": {
-			"rotation": [0, 0, -45],
-			"translation": [-3, -3.5, 0]
-		},
-		"fixed": {
-			"rotation": [0, 0, 45],
-			"translation": [3.5, -3, 0]
+			"rotation": [0, 90, 0]
 		}
 	}
 }
