@@ -21,6 +21,10 @@ public class PacketHandler {
         registrar.play(KillNear.IDENTIFIER, KillNear::new, handler -> handler
                 .client(KillNear::handle)
                 .server(KillNear::handle));
+
+        registrar.play(ArrowAgain.IDENTIFIER, ArrowAgain::new, handler -> handler
+                .client(ArrowAgain::handle)
+                .server(ArrowAgain::handle));
     }
 
     public static <MSG extends CustomPacketPayload> void broadcast(MSG message) {

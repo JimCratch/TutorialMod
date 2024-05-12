@@ -43,14 +43,5 @@ public class WeaponEvent {
                 event.setCanceled(victim.hurt(DamageSources.customDamage(attacker), 1000000000));
             }
         }
-
-        public static void TestingEvents(LivingDestroyBlockEvent livingDestroyBlockEvent) {
-            Block block = livingDestroyBlockEvent.getState().getBlock();
-            Minecraft minecraft = Minecraft.getInstance();
-
-            if (minecraft.player != null) {
-                minecraft.player.sendSystemMessage(Component.literal("Hello there this block is: " + block));
-            }
-        }
     }
 }
