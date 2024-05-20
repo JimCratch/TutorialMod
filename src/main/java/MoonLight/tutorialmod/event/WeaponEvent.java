@@ -4,20 +4,22 @@ import MoonLight.tutorialmod.TutorialMod;
 import MoonLight.tutorialmod.damage.DamageSources;
 import MoonLight.tutorialmod.item.ModItems;
 import MoonLight.tutorialmod.util.DamageUtil;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import java.util.ArrayList;
 import java.util.List;
-import net.neoforged.neoforge.event.entity.living.LivingDestroyBlockEvent;
 
 
 public class WeaponEvent {

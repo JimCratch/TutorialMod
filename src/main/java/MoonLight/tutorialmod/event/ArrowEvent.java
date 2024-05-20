@@ -3,6 +3,7 @@ package MoonLight.tutorialmod.event;
 import MoonLight.tutorialmod.TutorialMod;
 import MoonLight.tutorialmod.item.ModItems;
 import MoonLight.tutorialmod.item.custom.CustomBowItem;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -10,6 +11,10 @@ import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -21,8 +26,10 @@ public class ArrowEvent {
     public static class Events {
         @SubscribeEvent(priority = EventPriority.LOWEST)
         public static void ProjectileLandedLow(ProjectileImpactEvent event) {
+
             Projectile projectile = event.getProjectile();
             Level world = projectile.level();
+            HitResult result = event.getRayTraceResult();
 
             if (world.isClientSide()) {
                 return;
@@ -53,7 +60,19 @@ public class ArrowEvent {
                 //world.addFreshEntity(tnt);
 
                  */
-                world.explode(null, x, y, z, 5.0F, false, Level.ExplosionInteraction.TNT);
+                if (result.getType() == HitResult.Type.ENTITY) {
+                    world.explode(null, x, y, z, 2.0F, false, Level.ExplosionInteraction.TNT);
+                }
+                else {
+                    BlockHitResult blockResult = (BlockHitResult) event.getRayTraceResult();
+                    BlockPos blockPos = blockResult.getBlockPos();
+
+                    world.explode(null, x, y, z, 2.0F, false, Level.ExplosionInteraction.TNT);
+
+                    if (world.getBlockState(blockPos).getBlock() == Blocks.BEDROCK) {
+                        world.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
+                    }
+                }
             }
         }
     }
