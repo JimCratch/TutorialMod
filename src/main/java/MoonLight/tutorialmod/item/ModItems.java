@@ -4,6 +4,7 @@ import MoonLight.tutorialmod.TutorialMod;
 import MoonLight.tutorialmod.item.custom.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 

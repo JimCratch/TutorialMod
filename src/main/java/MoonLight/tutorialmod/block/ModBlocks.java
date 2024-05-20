@@ -30,11 +30,6 @@ public class ModBlocks {
         return false;
     }
 
-    @Nullable
-    public static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> createTickerHelper(BlockEntityType<A> pServerType, BlockEntityType<E> pClientType, BlockEntityTicker<? super E> pTicker) {
-        return pClientType == pServerType ? (BlockEntityTicker<A>) pTicker : null;
-    }
-
     public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, TutorialMod.MOD_ID);
 
     public static final DeferredHolder<Block, Block> USELESS_BLOCK = BLOCKS.register("useless_block", () -> new MagmaBlock(BlockBehaviour.Properties.of()
