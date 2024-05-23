@@ -1,6 +1,7 @@
 package MoonLight.tutorialmod;
 
 import MoonLight.tutorialmod.block.ModBlocks;
+import MoonLight.tutorialmod.enchantment.ModEnchantments;
 import MoonLight.tutorialmod.event.ArrowEvent;
 import MoonLight.tutorialmod.item.ModItems;
 import MoonLight.tutorialmod.modcreativemodetabs.ModCreativeModTabs;
@@ -19,12 +20,12 @@ public class TutorialMod {
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
         ModCreativeModTabs.CREATIVE_MODE_TABS.register(bus);
+        ModEnchantments.ENCHANTMENTS.register(bus);
 
 
         bus.addListener(TutorialMod::onClientSetup);
     }
 
     public static void onClientSetup(FMLClientSetupEvent event) {
-
     }
 }

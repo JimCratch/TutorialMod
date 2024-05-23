@@ -2,6 +2,7 @@ package MoonLight.tutorialmod.item.custom;
 
 import MoonLight.tutorialmod.util.ModTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 
@@ -20,5 +21,10 @@ public class CustomBowItem extends BowItem {
     @Override
     public Predicate<ItemStack> getAllSupportedProjectiles() {
         return BULLET_ARROW;
+    }
+
+    @Override
+    public AbstractArrow customArrow(AbstractArrow arrow, ItemStack stack) {
+        return arrow;
     }
 }

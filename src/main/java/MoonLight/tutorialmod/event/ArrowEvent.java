@@ -70,7 +70,7 @@ public class ArrowEvent {
                     world.explode(null, x, y, z, 2.0F, false, Level.ExplosionInteraction.TNT);
 
                     if (world.getBlockState(blockPos).getBlock() == Blocks.BEDROCK) {
-                        world.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
+                        world.destroyBlock(blockPos,true);
                     }
                 }
             }
